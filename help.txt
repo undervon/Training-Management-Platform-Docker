@@ -1,0 +1,44 @@
+#
+# Commands until integrate Liquibase to Docker (right now is integrated)
+# 
+# psql -U postgres -> connecting to postgres using CLI
+# \l | \list -> show DB-s
+# \c trainingManagementPlatform -> connecting to specific DB
+# \dt -> show tables
+
+# paste this
+INSERT INTO ROLES(ROLE_VALUE)
+VALUES ('ADMIN');
+
+INSERT INTO ROLES(ROLE_VALUE)
+VALUES ('MANAGER');
+
+INSERT INTO ROLES(ROLE_VALUE)
+VALUES ('EMPLOYEE');
+
+INSERT INTO EMPLOYEES(DEPARTMENT, EMAIL, EMPLOYEE_NUMBER, FIRST_NAME, LAST_NAME, PASSWORD, JOIN_DATE, IMAGE)
+VALUES ('admin', 'admin@admin.com', 0, 'admin', 'admin', '$2a$10$vu1lgEq6YPbGRoSKdXJewOCAZkZkKkddEAKWhlH1mUuGnLXI0FuxW',
+        CURRENT_TIMESTAMP, LO_IMPORT('/docker-entrypoint-initdb.d/admin-icon.png'));
+
+INSERT INTO EMPLOYEES(DEPARTMENT, EMAIL, EMPLOYEE_NUMBER, FIRST_NAME, LAST_NAME, PASSWORD, JOIN_DATE, IMAGE)
+VALUES ('VNI', 'silviu.butnaru@student.tuiasi.ro', 1, 'Silviu', 'Butnaru',
+        '$2a$10$FY2agXxDbnnIJQrHYhanlOVjBTKWXenWL62zRJwuH4ekYC.rvlsFu', CURRENT_TIMESTAMP,
+        LO_IMPORT('/docker-entrypoint-initdb.d/user-icon.png'));
+
+INSERT INTO EMPLOYEES(DEPARTMENT, EMAIL, EMPLOYEE_NUMBER, FIRST_NAME, LAST_NAME, PASSWORD, JOIN_DATE, IMAGE)
+VALUES ('VNI', 'marian-ilie.butnaru@student.tuiasi.ro', 2, 'Marian-Ilie', 'Butnaru',
+        '$2a$10$4JfQhO28CX5U/XLndmpATOIAPc3ASbDPXTRX8FNfuAsew7wvybRLe', CURRENT_TIMESTAMP,
+        LO_IMPORT('/docker-entrypoint-initdb.d/user-icon.png'));
+
+INSERT INTO EMPLOYEES_ROLES(ID_EMPLOYEE, ID_ROLE)
+VALUES (1, 1);
+
+INSERT INTO EMPLOYEES_ROLES(ID_EMPLOYEE, ID_ROLE)
+VALUES (2, 3);
+
+INSERT INTO EMPLOYEES_ROLES(ID_EMPLOYEE, ID_ROLE)
+VALUES (2, 2);
+
+INSERT INTO EMPLOYEES_ROLES(ID_EMPLOYEE, ID_ROLE)
+VALUES (3, 3);
+
