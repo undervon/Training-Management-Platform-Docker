@@ -23,7 +23,7 @@ INSERT INTO ROLES(ROLE_VALUE)
 VALUES ('EMPLOYEE');
 
 INSERT INTO MANAGERS(EMAIL)
-VALUES ('admin@admin.com');
+VALUES ('manager@manager.com');
 
 INSERT INTO MANAGERS(EMAIL)
 VALUES ('silviu.butnaru@student.tuiasi.ro');
