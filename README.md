@@ -2,7 +2,6 @@
 
 #### http://localhost:8090/swagger-ui/index.html -> URL to access Swagger
 
-<hr>
 ##### Commands until integrate Liquibase to Docker (right now is integrated)
 
 <ul>
