@@ -1,8 +1,8 @@
 # Training-Management-Platform-Docker
 
-### http://localhost:8090/swagger-ui/index.html -> URL to access Swagger
+#### http://localhost:8090/swagger-ui/index.html -> URL to access Swagger
 
-### Commands until integrate Liquibase to Docker (right now is integrated)
+##### Commands until integrate Liquibase to Docker (right now is integrated)
 
 <ul>
 	<li>psql -U postgres -> connecting to postgres using CLI</li>
@@ -11,7 +11,7 @@
 	<li>\dt -> show tables</li>
 </ul>
 
-#### paste this
+##### After connecting, paste this
 <p>
 INSERT INTO ROLES(ROLE_VALUE)
 VALUES ('ADMIN');
