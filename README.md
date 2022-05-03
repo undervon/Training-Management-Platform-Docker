@@ -1,16 +1,25 @@
 # Training-Management-Platform-Docker
 
-# http://localhost:8090/swagger-ui/index.html -> URL to access Swagger
+<p>
+### http://localhost:8090/swagger-ui/index.html -> URL to access Swagger
+</p>
 
-#
-# Commands until integrate Liquibase to Docker (right now is integrated)
-# 
-# psql -U postgres -> connecting to postgres using CLI
-# \l | \list -> show DB-s
-# \c trainingManagementPlatform -> connecting to specific DB
-# \dt -> show tables
+<p>
+### Commands until integrate Liquibase to Docker (right now is integrated)
+</p> 
 
-# paste this
+<p>
+psql -U postgres -> connecting to postgres using CLI
+\l | \list -> show DB-s
+\c trainingManagementPlatform -> connecting to specific DB
+\dt -> show tables
+</p>
+
+<p>
+#### paste this
+</p>
+
+<p>
 INSERT INTO ROLES(ROLE_VALUE)
 VALUES ('ADMIN');
 
@@ -125,4 +134,4 @@ VALUES (8, 3);
 -- rares-petru: EMPLOYEE
 INSERT INTO EMPLOYEES_ROLES(ID_EMPLOYEE, ID_ROLE)
 VALUES (9, 3);
-
+</p>
