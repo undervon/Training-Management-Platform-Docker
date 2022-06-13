@@ -2,8 +2,8 @@
 
 #### For each microservice there is a docker file.
 
-### Run the command only once
+##### Run the command only once!
 
-## Before creating containers, create the network with the following command:
+###### Before creating containers, create the network with the following command:
 
-## docker network create backend_network
+	>>> docker network create backend_network
