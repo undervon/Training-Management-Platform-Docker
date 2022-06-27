@@ -117,15 +117,21 @@ INSERT INTO EMPLOYEES_ROLES(ID_EMPLOYEE, ID_ROLE)
 VALUES ((SELECT id_employee FROM EMPLOYEES WHERE email = 'admin@admin.com'),
         (SELECT id_role FROM ROLES WHERE role_value = 'ADMIN'));
 
--- silviu -> MANAGER<br>
+-- silviu -> MANAGER, EMPLOYEE<br>
 INSERT INTO EMPLOYEES_ROLES(ID_EMPLOYEE, ID_ROLE)
 VALUES ((SELECT id_employee FROM EMPLOYEES WHERE email = 'silviu.butnaru@student.tuiasi.ro'),
         (SELECT id_role FROM ROLES WHERE role_value = 'MANAGER'));
+INSERT INTO EMPLOYEES_ROLES(ID_EMPLOYEE, ID_ROLE)
+VALUES ((SELECT id_employee FROM EMPLOYEES WHERE email = 'silviu.butnaru@student.tuiasi.ro'),
+        (SELECT id_role FROM ROLES WHERE role_value = 'EMPLOYEE'));
 
--- marian-ilie -> MANAGER<br>
+-- marian-ilie -> MANAGER, EMPLOYEE<br>
 INSERT INTO EMPLOYEES_ROLES(ID_EMPLOYEE, ID_ROLE)
 VALUES ((SELECT id_employee FROM EMPLOYEES WHERE email = 'marian-ilie.butnaru@student.tuiasi.ro'),
         (SELECT id_role FROM ROLES WHERE role_value = 'MANAGER'));
+INSERT INTO EMPLOYEES_ROLES(ID_EMPLOYEE, ID_ROLE)
+VALUES ((SELECT id_employee FROM EMPLOYEES WHERE email = 'marian-ilie.butnaru@student.tuiasi.ro'),
+        (SELECT id_role FROM ROLES WHERE role_value = 'EMPLOYEE'));
 
 -- alexandra -> MANAGER, EMPLOYEE<br>
 INSERT INTO EMPLOYEES_ROLES(ID_EMPLOYEE, ID_ROLE)
