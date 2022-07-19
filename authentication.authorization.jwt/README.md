@@ -13,8 +13,8 @@
 	<li>\dt -> show tables</li>
 </ul>
 
-##### After connecting, paste this
-<p>
+##### After connecting, paste this:
+~~~
 INSERT INTO ROLES(ROLE_VALUE)
 VALUES ('ADMIN');
 
@@ -173,4 +173,4 @@ VALUES ((SELECT id_employee FROM EMPLOYEES WHERE email = 'mihai-adrian.mircea@st
 INSERT INTO EMPLOYEES_ROLES(ID_EMPLOYEE, ID_ROLE)
 VALUES ((SELECT id_employee FROM EMPLOYEES WHERE email = 'rares-petru.vanga@student.tuiasi.ro'),
         (SELECT id_role FROM ROLES WHERE role_value = 'EMPLOYEE'));
-</p>
+~~~
